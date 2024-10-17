@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --preto: #000000;
+    --cinza-escuro: #3C3C3C;
+    --cinza-claro: #F6F6F6;
+    --branco: #ffffff;
+    --cor-p1: #266DD3;
+    --cor-p2: #23C9FF;
+    --cor-p3: #C0ECFF;
+    --cor-p4: #000210;
+}
+ 

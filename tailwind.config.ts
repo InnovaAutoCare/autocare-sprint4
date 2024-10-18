@@ -13,6 +13,9 @@ const config: Config = {
         corP2: 'var(--cor-p2)',
         corP3: 'var(--cor-p3)',
         corP4: 'var(--cor-p4)',
+      },
+      borderWidth:{
+        '1': '1px',
       }
     },
   },

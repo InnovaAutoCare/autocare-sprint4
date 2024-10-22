@@ -13,10 +13,17 @@ const config: Config = {
         corP2: 'var(--cor-p2)',
         corP3: 'var(--cor-p3)',
         corP4: 'var(--cor-p4)',
+        corP5: 'var(--cor-p5)',
       },
       borderWidth:{
         '1': '1px',
-      }
+      },
+      fontSize: {
+        '6xl': ['4rem', '1'],
+       },
+       screens: {
+        'md': '840px',
+       },
     },
   },
   plugins: [],

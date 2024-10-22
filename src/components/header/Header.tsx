@@ -87,7 +87,7 @@ export const Header = () => {
                         <li>
                             <Link
                                 href="/login"
-                                className={`${roboto.className} text-corP1 p-2 rounded-lg border border-corP1 hover:bg-corP1 hover:text-branco`}
+                                className={`${roboto.className} text-corP1 p-2 rounded-lg border-[1px] border-corP1 hover:bg-corP1 hover:text-branco`}
                             >
                                 ÁREA DO CLIENTE
                             </Link>

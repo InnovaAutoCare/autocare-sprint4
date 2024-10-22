@@ -11,8 +11,17 @@
     --cor-p2: #23C9FF;
     --cor-p3: #C0ECFF;
     --cor-p4: #000210;
-    --1: 1px;
+    --cor-p5: #3b83e0;
+}
+.container{
+    @apply px-5 py-[40px] sm:py-[80px] md:py-[120px] max-w-screen-2xl mx-auto
 }
 a{
     @apply text-preto hover:text-corP1 transition-colors; 
+}
+.botao{
+    @apply bg-corP1 text-branco uppercase py-4 px-8 rounded-lg text-base font-semibold cursor-pointer self-center hover:bg-corP5 hover:text-branco transition-colors inline-block;
+}
+.text{
+    @apply text-2xl text-cinzaEscuro;
 }

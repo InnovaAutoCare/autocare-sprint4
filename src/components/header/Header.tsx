@@ -34,7 +34,7 @@ export const Header = () => {
                 </button>
 
                 <ul 
-                    className="hidden md:flex gap-10 text-sm" 
+                    className="hidden md:flex gap-10 text-base" 
                     tabIndex={drawer ? -1 : undefined}
                 >
                     <li>

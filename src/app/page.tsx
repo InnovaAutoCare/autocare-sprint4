@@ -1,9 +1,13 @@
-import { CardServico } from "@/components/CardServico/CardServico";
+import Image from 'next/image';
+
+import { CardServico } from "@/components/cardServico/CardServico";
 
 import diagnosticoIcon from "../../public/assets/svg/diagnostico-icon.svg";
 import orcamentoIcon from "../../public/assets/svg/carteira-icon.svg";
 import consertoIcon from "../../public/assets/svg/conserto-icon.svg";
+import comoFunciona from '../../public/assets/images/imagem-diferenciais.jpg'
 import { Inter, Roboto } from "next/font/google";
+import { Passo } from '@/components/passo/Passo';
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
@@ -59,6 +63,47 @@ export default function PageHome() {
 
         </div>
       </section>
+
+      <section id="como-funciona" aria-label="Como funciona" className='container grid grid-cols-1 auto-rows-min gap-[60px] md:grid-cols-2 md:gap-10 md:place-items-start'>
+        <div className='self-start md:col-span-1'>
+          <h2 className={`${inter.className} text-4xl sm:text-5xl font-semibold mb-5 md:row-span-1`}>Resolva os seus problemas com apenas <span className='text-corP1'>4 passos</span> simples</h2>
+        </div>
+        
+        <div className="col-start-1 row-start-3 md:col-start-1 md:row-start-2">
+          <Image
+            src={comoFunciona}
+            alt="Como funciona"
+            className='rounded-[20px]'
+          />
+        </div>
+
+        <div className="col-start-1 row-start-2 md:row-span-2 md:col-start-2 md:row-start-1">
+          <div className="flex flex-col space-y-10">
+            <Passo
+              decorativoClass={true}
+              titulo="Conecte o App ao Bluetooth de seu veículo"
+              texto="Nossa tecnologia inovadora simplifica processos e melhora a eficiência nos centros automotivos."
+            />
+            <Passo
+              decorativoClass={true}
+              titulo="Receba o orçamento detalhado e avalie se cabe no seu bolso"
+              texto="Nossa tecnologia inovadora simplifica processos e melhora a eficiência nos centros automotivos."
+            />
+            <Passo
+              decorativoClass={true}
+              titulo="Agende com uma oficina próxima de sua escolha"
+              texto="Nossa tecnologia inovadora simplifica processos e melhora a eficiência nos centros automotivos."
+            />
+            <Passo
+              decorativoClass={false}
+              titulo="Seja atualizado pela oficina sobre quando seu carro ficará disponível para retirada"
+              texto="Nossa tecnologia inovadora simplifica processos e melhora a eficiência nos centros automotivos."
+            />
+          </div>
+        </div>
+      </section>
+
+
     </>
   );
 }

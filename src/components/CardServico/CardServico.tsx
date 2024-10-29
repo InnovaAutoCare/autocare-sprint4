@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
-import { Roboto } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 interface CardServicoProps {
@@ -20,7 +21,7 @@ export const CardServico = ({ imageSrc, imageAlt, title, description }: CardServ
                 height={64}
                 className="mb-[10px]"
             />
-            <h3 className="text-3xl mb-5 font-semibold text-center md:text-start">{title}</h3>
+            <h3 className={`${inter.className} text-3xl mb-5 font-semibold text-center md:text-start`}>{title}</h3>
             <p className={`${roboto.className} text text-center md:text-start`}>{description}</p>
         </article>
     );

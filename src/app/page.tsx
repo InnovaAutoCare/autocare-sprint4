@@ -1,13 +1,18 @@
 import Image from 'next/image';
 
 import { CardServico } from "@/components/cardServico/CardServico";
+import { Avaliacao } from "@/components/avaliacao/Avaliacao";
+import { Passo } from '@/components/passo/Passo';
 
 import diagnosticoIcon from "../../public/assets/svg/diagnostico-icon.svg";
 import orcamentoIcon from "../../public/assets/svg/carteira-icon.svg";
 import consertoIcon from "../../public/assets/svg/conserto-icon.svg";
 import comoFunciona from '../../public/assets/images/imagem-diferenciais.jpg'
+import profileRodrigo from '../../public/assets/images/avaliacao-1.jpg'
+import profileJoao from '../../public/assets/images/avaliacao-2.jpg'
+import profileRegina from '../../public/assets/images/avaliacao-3.jpg'
+
 import { Inter, Roboto } from "next/font/google";
-import { Passo } from '@/components/passo/Passo';
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
@@ -103,6 +108,26 @@ export default function PageHome() {
         </div>
       </section>
 
+      <section aria-label="Avaliações" className='container'>
+        <h2 className={`${inter.className} text-center text-4xl sm:text-5xl font-semibold mb-20`}>Conheça a <span className='text-corP1'>opinião</span> de quem utilizou <br />nosso <span>serviço</span></h2>
+        <ul className='flex gap-10 px-5 pb-5 overflow-x-auto'>
+          <Avaliacao
+            texto='Meu carro foi consertado rapidamente e o preço foi justo. Recomendo sem hesitar!'  
+            image={profileRodrigo}
+            nome='Rodrigo Freitas'
+          />
+          <Avaliacao
+            texto='Levei meu carro com um problema complicado e eles resolveram rapidamente. Além disso, me mantiveram informado durante todo o processo. '  
+            image={profileJoao}
+            nome='João Pedro'
+          />
+          <Avaliacao
+            texto='Eles realmente se importam com seus clientes e fazem de tudo para garantir que você saia satisfeito. Não troco a Innova Auto Care por nada!'  
+            image={profileRegina}
+            nome='Regina Fonseca'
+          />
+        </ul>
+      </section>
 
     </>
   );

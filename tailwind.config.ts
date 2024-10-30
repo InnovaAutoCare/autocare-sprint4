@@ -25,6 +25,9 @@ const config: Config = {
         'md': '840px',
        },
     },
+    gridTemplateColumns: {
+      'custom': '3fr 5fr 4fr', 
+    },
   },
   plugins: [],
 };

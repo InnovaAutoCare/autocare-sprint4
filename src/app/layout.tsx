@@ -3,6 +3,7 @@ import { Inter, Roboto} from "next/font/google";
 
 import  { Header }from "@/components/header/Header";
 import "./globals.css";
+import { Footer } from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
@@ -14,12 +15,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" className="scroll-smooth">
       <body
         className={`${inter.className} ${roboto.className} ${robotoMedium.className} antialiased`}
       >
         <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

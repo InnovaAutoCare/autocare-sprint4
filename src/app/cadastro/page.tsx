@@ -14,10 +14,10 @@ export default function Cadastro() {
                     <p className="bg-corP1 text-branco py-5 px-8 rounded-full">
                         Cadastro cliente
                     </p>
-                    <Link href='cadastroParceiro'
+                    <Link href='cadastroOficina'
                         className='pr-4'
                     >
-                        Cadastro parceiros
+                        Cadastro oficina
                     </Link>
                 </div>
 

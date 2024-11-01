@@ -25,3 +25,21 @@ a{
 .text{
     @apply text-2xl text-cinzaEscuro;
 }
+.formContainer{
+    @apply py-20 max-w-[400px] relative;
+}
+.logoForm{
+    @apply w-[230px] mx-auto mb-5;
+}
+.titleForm{
+    @apply text-2xl font-semibold text-center mb-[10px];
+}
+.subtitleForm{
+    @apply text-[#3c3c3c] text-center mb-10;
+}
+.labelForm{
+    @apply block font-semibold mb-[10px];
+}
+.inputsForm{
+    @apply border-1 border-solid border-[#a3a3a3] rounded p-[10px] w-full box-border focus:outline-none focus:border-corP1;
+}

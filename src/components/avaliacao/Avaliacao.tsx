@@ -13,9 +13,9 @@ interface AvaliacaoProps {
 
 export const Avaliacao = ({ texto, image, nome }: AvaliacaoProps) =>{
     return(
-        <li className='flex-1 min-w-[460px] p-10 round-tl-[10px] rounded-tr-[10px] shadow border-b-4 border-solid border-corP1 grid auto-rows-min'>
+        <li className='flex-1 min-w-[460px] p-10 round-tl-[10px] rounded-tr-[10px] shadow border-b-4 border-solid border-corP1 grid'>
             <p className={`${roboto.className} text preto`}>{texto}</p>
-            <div className='flex items-center mt-[60px] gap-5'>
+            <div className='flex items-center mt-[60px] gap-5 self-end'>
                 <Image
                     src={image}
                     alt={nome}

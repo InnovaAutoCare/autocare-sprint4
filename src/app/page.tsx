@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { Header } from '@/components/header/Header';
 import { CardServico } from "@/components/cardServico/CardServico";
 import { Avaliacao } from "@/components/avaliacao/Avaliacao";
 import { Passo } from '@/components/passo/Passo';
@@ -13,12 +14,15 @@ import profileJoao from '../../public/assets/images/avaliacao-2.jpg'
 import profileRegina from '../../public/assets/images/avaliacao-3.jpg'
 
 import { Inter, Roboto } from "next/font/google";
+import { Footer } from '@/components/footer/Footer';
+
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
 
 export default function PageHome() {
   return (
     <>
+      <Header/>    
       <main className="container grid grid-cols-1 md:grid-cols-2 gap-10">
         <div className="self-center order-2 md:order-1 texto_main">
           <h1 className={`${inter.className} text-5xl sm:text-6xl font-semibold mb-8`}>
@@ -27,7 +31,7 @@ export default function PageHome() {
           <p className="text mb-5">
             Tenha o diagnóstico do problema do seu veículo de uma nova maneira.
           </p>
-          <a className="botao">CONHECER O SERVIÇO</a>
+          <a className="botao">UTILIZE O SERVIÇO</a>
         </div>
         <div className="order-1 md:order-2">
         <div
@@ -44,7 +48,7 @@ export default function PageHome() {
             <h2 className={`${inter.className} text-4xl sm:text-5xl font-semibold mb-5 text-center`}>Por que utilizar o <span className="text-corP1">serviço AutoCare</span>?</h2>
             <p className={`${roboto.className} text text-center w-fullmd:w-1/2 mx-auto`}>Nossa tecnologia inovadora simplifica processos e melhora a eficiência nos centros automotivos.</p>
           </div>     
-          <div className="grid grid-cols-1  md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <CardServico
               imageSrc={diagnosticoIcon}
               imageAlt="Diagnóstico"
@@ -64,7 +68,7 @@ export default function PageHome() {
               description="Nossa tecnologia inovadora simplifica processos e melhora a eficiência nos centros automotivos."
             />
           </div>
-          <a className="botao text-center">CONHECER O SERVIÇO</a>
+          <a className="botao text-center">UTILIZE O SERVIÇO</a>
 
         </div>
       </section>
@@ -128,7 +132,7 @@ export default function PageHome() {
           />
         </ul>
       </section>
-
+      <Footer/>
     </>
   );
 }

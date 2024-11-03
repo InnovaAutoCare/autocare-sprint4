@@ -47,17 +47,18 @@ export default function Cadastro() {
            
             const response = await axios.post('http://localhost:8080/cliente', data, {
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
                 }
             });
             if (response.status === 201) {
-                const clienteLogin = response.data.login;
-                if (!clienteLogin) {
-                    throw new Error("Login do cliente não foi retornado pela API");
-                }
+                // const clienteLogin = response.data.login;
         
                 alert("Cadastro realizado com sucesso!");
-                router.push(`/cadastroCarro?clienteLogin=${clienteLogin}`); 
+                router.push(`/cadastroCarro?clienteLogin=${login}`); 
+            }
+            if (response.status === 400){
+                alert("Erro ao buscar login do cliente")
             }
         } catch (error) {
             console.error("Erro ao criar cadastro:", error);

@@ -6,10 +6,9 @@
 
 ## 💻 Tecnologias Utilizadas
 
-- React 
+- NextJS 
 - TypeScript
-- Vite
-- CSS Modules
+- Tailwind CSS
 
 ## 🚀 Instalando <autocare>
 

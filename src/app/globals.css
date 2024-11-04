@@ -13,6 +13,9 @@
     --cor-p4: #000210;
     --cor-p5: #3b83e0;
 }
+body{
+    @apply bg-[#FCFCFC]
+}
 .container{
     @apply px-5 py-[40px] sm:py-[80px] md:py-[120px] max-w-screen-2xl mx-auto
 }

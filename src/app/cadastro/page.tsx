@@ -113,12 +113,12 @@ export default function Cadastro() {
                             className="inputsForm"
                             value={cpf}
                             onChange={(e) => {
-                                let formattedCpf = e.target.value.replace(/\D/g, "");  // Remove qualquer caractere não numérico
-                                formattedCpf = formattedCpf.replace(/(\d{3})(\d)/, "$1.$2"); // Insere o primeiro ponto
-                                formattedCpf = formattedCpf.replace(/(\d{3})(\d)/, "$1.$2"); // Insere o segundo ponto
-                                formattedCpf = formattedCpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Insere o traço
+                                let formattedCpf = e.target.value.replace(/\D/g, "");  
+                                formattedCpf = formattedCpf.replace(/(\d{3})(\d)/, "$1.$2"); 
+                                formattedCpf = formattedCpf.replace(/(\d{3})(\d)/, "$1.$2"); 
+                                formattedCpf = formattedCpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); 
 
-                                setCpf(formattedCpf); // Atualiza o estado com o CPF formatado
+                                setCpf(formattedCpf); 
                             }}
                         />
                     </div>
@@ -130,7 +130,8 @@ export default function Cadastro() {
                     <div className='mb-5'>
                         <label htmlFor="" className={`${inter.className} labelForm`}>Telefone</label>
                         <input type="text" placeholder="(11) 99999-9999" className="inputsForm" value={telefone}
-                        onChange={(e) => setTelefone(e.target.value)}/>
+                        onChange={(e) => setTelefone(e.target.value)}
+                        minLength={11} maxLength={11}/>
                     </div>
                     <div className='mb-5'>
                         <label htmlFor="idSenha" className={`${inter.className} labelForm`}>Senha</label>

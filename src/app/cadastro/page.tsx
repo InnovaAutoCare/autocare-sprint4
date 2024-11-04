@@ -103,16 +103,23 @@ export default function Cadastro() {
                     <div className='mb-5'>
                         <label htmlFor="idCpf" className={`${inter.className} labelForm`}>CPF</label>
                         <input
-                        type="text"
-                        id="idCpf"
-                        placeholder="XXX.XXX.XXX-XX"
-                        required
-                        minLength={14}
-                        maxLength={14}
-                        name="txtCpf"
-                        className="inputsForm"
-                        value={cpf}
-                        onChange={(e) => setCpf(e.target.value)}
+                            type="text"
+                            id="idCpf"
+                            placeholder="XXX.XXX.XXX-XX"
+                            required
+                            minLength={14}
+                            maxLength={14}
+                            name="txtCpf"
+                            className="inputsForm"
+                            value={cpf}
+                            onChange={(e) => {
+                                let formattedCpf = e.target.value.replace(/\D/g, "");  // Remove qualquer caractere não numérico
+                                formattedCpf = formattedCpf.replace(/(\d{3})(\d)/, "$1.$2"); // Insere o primeiro ponto
+                                formattedCpf = formattedCpf.replace(/(\d{3})(\d)/, "$1.$2"); // Insere o segundo ponto
+                                formattedCpf = formattedCpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // Insere o traço
+
+                                setCpf(formattedCpf); // Atualiza o estado com o CPF formatado
+                            }}
                         />
                     </div>
                     <div className='mb-5'>

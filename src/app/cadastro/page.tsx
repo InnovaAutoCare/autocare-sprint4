@@ -44,7 +44,6 @@ export default function Cadastro() {
         };
 
         try {
-           
             const response = await axios.post('http://localhost:8080/cliente', data, {
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,8 +51,7 @@ export default function Cadastro() {
                 }
             });
             if (response.status === 201) {
-                // const clienteLogin = response.data.login;
-        
+                sessionStorage.setItem('clienteLogin', login);
                 alert("Cadastro realizado com sucesso!");
                 router.push(`/cadastroCarro?clienteLogin=${login}`); 
             }

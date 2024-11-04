@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 interface Oficina {
     id_oficina: number; 
     nome_oficina: string; 
-    cnpj: string; // Mude para string se o CNPJ for armazenado como texto
+    cnpj: string; 
     horario_funcionamento: string;
     data_abertura: Date;
 }
